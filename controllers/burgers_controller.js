@@ -36,6 +36,13 @@ router.put("/:id", function(req, res) {
     res.redirect("/");
   });
 });
+router.delete("/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  burger.delete(condition, function() {
+    res.redirect("/");
+  });
+});
 
 
 
