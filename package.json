@@ -1,0 +1,21 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A web app that lets users create custom burgers. Node and mySQL query and route data while handlebars generate the HTML.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chupacobres/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chupacobres/burger/issues"
+  },
+  "homepage": "https://github.com/chupacobres/burger#readme"
+}
