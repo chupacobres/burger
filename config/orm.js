@@ -19,15 +19,19 @@ function printQuestionMarks(num) {
 // Helper function for SQL syntax.
 function objToSql(ob) {
     var arr = [];
-
+  
     for (var key in ob) {
-        if (Object.hasOwnProperty.call(ob, key)) {
-            arr.push(key + "=" + ob[key]);
+      var value = ob[key];
+      if (Object.hasOwnProperty.call(ob, key)) {
+        if (typeof value === "string" && value.indexOf(" ") >= 0) {
+          value = "'" + value + "'";
         }
+        arr.push(key + "=" + value);
+      }
     }
-
+  
     return arr.toString();
-}
+  }
 
 // Object for all our SQL statement functions.
 var orm = {
@@ -69,6 +73,7 @@ var orm = {
         queryString += condition;
 
         console.log(queryString);
+
         connection.query(queryString, function (err, result) {
             if (err) {
                 throw err;
