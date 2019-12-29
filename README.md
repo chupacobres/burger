@@ -6,7 +6,7 @@ With the bottom form, a new burger is added to mySQL database and it can be devo
 
 ## Heroku Link
 
-Heroku link
+https://stormy-garden-26964.herokuapp.com/
 
 ## Installation
 
