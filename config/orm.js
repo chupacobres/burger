@@ -76,7 +76,7 @@ var orm = {
 		queryString += " WHERE ";
 		queryString += condition;
 
-		// console.log(queryString);
+		console.log(queryString);
 
 		// Perform the database query
 		connection.query(queryString, function(err, result) {
